@@ -1,7 +1,12 @@
 # pages/urls.py
 from django.urls import path
-from .views import index
+from . import views
 
 urlpatterns = [
-  path('', index, name = 'index'),
+  path('', views.home, name = 'home'),
+  path('home/', views.home, name = 'home'),
+  path('about/', views.about, name = 'about'),
+  path('now/', views.now, name = 'now'),
+  path('projects/', views.projects, name = 'projects'),
+  path('contact/', views.contact, name = 'contact'),
 ]
