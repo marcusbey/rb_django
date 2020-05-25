@@ -1,3 +1,44 @@
-.navbar-logo {
-  max-width: 2.2rem;
+
+ .logo-container {
+
+ }
+
+#logo-svg {
+  width: 40px;
+  height: auto;
+}
+
+#path_r {
+  stroke-dasharray: 1416px;
+  stroke-dashoffset: 1416px;
+  animation: line-anim 2s ease forwards;
+}
+
+
+#path_b {
+  stroke-dasharray: 2279px;
+  stroke-dashoffset: 2279px;
+  animation: line-anim 2s ease forwards;
+}
+
+
+@keyframes line-anim {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+.container-left {
+  display: inline-flex;
+  height: 50vh;
+  align-items: center;
+  float: left;
+}
+
+.container-right {
+  display: inline-flex;
+    height: 50vh;
+  align-items: center;
+  float: right;
 }
