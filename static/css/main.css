@@ -42,3 +42,13 @@
   align-items: center;
   float: right;
 }
+
+
+.dark{
+    border:3px solid red;
+}
+
+
+.light{
+    border:3px solid yellow;
+}

@@ -3,7 +3,13 @@
 
 {% block content %}
   <!-- Header -->
-  <section class="masthead contact-section">
+  <section class="masthead contact-section"
+           style="
+            background: linear-gradient(to bottom, rgba(22, 22, 22, 0.3) 0%, rgba(22, 22, 22, 0.7) 100%, #161616 0%), url({{ background_url }});
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: scroll;
+            background-size: cover;">
     <div class="container">
 
       <div class="container-right col-6 col-md-6 col-sm-12">
