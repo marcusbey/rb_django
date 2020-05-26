@@ -11,7 +11,8 @@ def rand_background():
   background_files = os.listdir(dir_path)
   for name in background_files:
     background_urls.append('../' + dir_path + name)
-  return random.choice(background_urls);
+  image = random.choice(background_urls)
+  return [image, image[26:27]];
 
 def index(request):
   title = "2omain 3030Ξ";
@@ -19,8 +20,9 @@ def index(request):
 
 
 def home(request):
-  background_url = rand_background();
-  return render(request, 'home.html', {'background_url': background_url});
+  background = rand_background()
+  mode = 'dark' if background[1] == 'd' else 'light'
+  return render(request, 'home.html', {'background_url': background[0], 'mode' : mode });
 
 def now(request):
   return render(request, 'now.html');

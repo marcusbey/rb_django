@@ -45,10 +45,10 @@
 
 
 .dark{
-    border:3px solid red;
+    border: 3px solid black;
 }
 
 
 .light{
-    border:3px solid yellow;
+    border:3px solid white;
 }
