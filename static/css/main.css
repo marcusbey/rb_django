@@ -3,6 +3,14 @@
 
  }
 
+ .dark {
+  color: rgba(255, 255, 255, 0.8);
+ }
+
+ .light {
+  color: rgba(0, 0, 0, 0.8);
+ }
+
 #logo-svg {
   width: 40px;
   height: auto;
@@ -33,22 +41,50 @@
   display: inline-flex;
   height: 50vh;
   align-items: center;
-  float: left;
 }
 
 .container-right {
-  display: inline-flex;
-    height: 50vh;
+
+  display: flex;
+  justify-content: center;
   align-items: center;
+  height: 50vh;
   float: right;
 }
 
+.master-letter {
+  display: block;
+  position: relative;
+  letter-spacing: 0.2rem;
+  font-size: 3rem;
+  font-weight: bold;
+  line-height: 0.2rem;
+  float:left;
+  clear: both;
 
-.dark{
-    border: 3px solid black;
+}
+
+.intro {
+  display: block;
+  font-size: 1.1rem;
+  padding: 5%;
+  border-radius: 5px;
+  text-align: justify;
+  /* background-color: rgba(255, 255, 255, 0.2); */
+}
+
+ .light .hightlight{
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.dark .hightlight  {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.home-btn {
+  position: absolute;
+  right: 15%;
+  bottom: 20%;
 }
 
 
-.light{
-    border:3px solid white;
-}

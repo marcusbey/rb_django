@@ -46,15 +46,27 @@
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
   }
-  #mainNav .navbar-brand {
+  #mainNav .navbar-brand .dark {
     padding: .5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
-  #mainNav .nav-link {
+
+    #mainNav .navbar-brand .light {
+    padding: .5rem 0;
+    color: rgba(0, 0, 0, 0.5);
+  }
+
+  #mainNav .nav-link .dark{
     transition: none;
     padding: 2rem 1.5rem;
     color: rgba(255, 255, 255, 0.5);
+}
+  #mainNav .nav-link .light {
+    transition: none;
+    padding: 2rem 1.5rem;
+    color: rgba(0, 0, 0, 0.5);
   }
+
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
   }
@@ -87,6 +99,8 @@
 
 .masthead {
   position: relative;
+  display: flex;
+  align-items: flex-start;
   width: 100%;
   height: auto;
   min-height: 35rem;

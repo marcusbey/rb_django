@@ -14,14 +14,16 @@ def rand_background():
   image = random.choice(background_urls)
   return [image, image[26:27]];
 
-def index(request):
-  title = "2omain 3030Ξ";
-  return render(request, 'index.html', {'title': title});
 
+def index(request):
+  background = rand_background();
+  mode = 'dark' if background[1] == 'd' else 'light';
+  title = "2omain 3030Ξ";
+  return render(request, 'index.html', {'title': title, 'mode' : mode });
 
 def home(request):
-  background = rand_background()
-  mode = 'dark' if background[1] == 'd' else 'light'
+  background = rand_background();
+  mode = 'dark' if background[1] == 'd' else 'light';
   return render(request, 'home.html', {'background_url': background[0], 'mode' : mode });
 
 def now(request):
