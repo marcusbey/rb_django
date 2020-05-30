@@ -1,9 +1,9 @@
 {% load static %}
 {% block content %}
 <!-- Navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top {{ mode }}" id="mainNav">
+  <nav class="navbar navbar-expand-lg navbar-{{ mode }} fixed-top " id="mainNav">
     <div class="container">
-      <a class="navbar-brand js-scroll-trigger" href="{% url 'home' %}">
+      <a class="navbar-brand " href="{% url 'home' %}">
         <div class="logo-container">
           <?xml version="1.0" encoding="UTF-8"?>
           <svg  id="logo-svg"
@@ -14,10 +14,9 @@
                 xmln:space="preserve">
             <title>logo: romain boboe</title>
             <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-              <g  id="path"
+              <g  id="path" class="logo"
                   opacity="0.7"
                   transform="translate(0.000000, 25.000000)"
-                  stroke="#FFF"
                   stroke-width="50">
                   <polyline
                   id="path_r"
@@ -38,13 +37,13 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="{% url 'about' %}">About</a>
+            <a class="nav-link {{ mode }} js-scroll-trigger" href="{% url 'about' %}">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href=" {% url 'projects' %}">Projects</a>
+            <a class="nav-link {{ mode }} js-scroll-trigger" href=" {% url 'projects' %}">Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href=" {% url 'contact' %}">Contact</a>
+            <a class="nav-link {{ mode }} js-scroll-trigger" href=" {% url 'contact' %}">Contact</a>
           </li>
         </ul>
       </div>

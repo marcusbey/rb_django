@@ -3,7 +3,13 @@
 
 {% block content %}
   <!-- Header -->
-  <section  class="masthead contact-section {{ mode }}"
+  <section id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  </section>
+
+  <section  id="main"
+            class="masthead contact-section {{ mode }}"
             style="
             background:
               linear-gradient(to bottom, rgba(22, 22, 22, 0.1) 60%, rgba(22, 22, 22, 0.7) 90%, #161616 100%),
@@ -14,31 +20,36 @@
             background-size: cover;"
             >
     <div class="container">
-      <div class="container-left col6 col-md-6 col-sm-12 col-xm-12">
-        <p class="intro {{ mode }}">
-          <span class="master-letter">S</span><span class="hightlight {{ mode }}">olving problems and inspiring people is what i do. I'm passionnate about tree things: technology, architecture and nature... Oooh and  i love food! yeah we all do. <br/>
-          i <strong>design</strong>, i <strong>code</strong>, i <strong>built</strong>, i <strong>write</strong> and i'm still learning new stuffs.  <br/>
-          Find out what i'm doing <a href="{% url 'now'%}"><strong>now</strong></a></span>
-        </p>
-      </div>
-
-
-      <div class="container-right col-6 col-md-6 col-sm-12 col-xm-12">
-        <div class = "social d-flex justify-content-center" >
-          <a class="mx-2" href="https://github.com/marcusbey" target="_blank"><i class="fab fa-github"></i>
-          <a class="mx-2" href="https://medium.com/@rboboe" target="_blank"><i class="fab fa-medium"></i>
-          <a class="mx-2" href="https://www.linkedin.com/in/romainboboe/" target="_blank"><i class="fab fa-linkedin"></i></a>
-          <a class="mx-2" href="https://www.twitter.com/romainbey" target="_blank"><i class="fab fa-twitter"></i></a>
-          <a class="mx-2" href="https://www.instagram.com/bey.marcus/" target="_blank"><i class="fab fa-instagram"></i></a>
+      <div class="row d-flex ">
+        <div class="container-left col6 col-md-6 col-sm-12 col-xm-12">
+          <p class="intro {{ mode }}">
+            <span class="master-letter">S</span><span class="hightlight {{ mode }}">olving problems and inspiring people is what i do. I'm passionnate about tree things: technology, architecture and nature... Oooh and  i love food! yeah we all do. <br/>
+            i <strong>design</strong>, i <strong>code</strong>, i <strong>built</strong>, i <strong>write</strong> and i'm still learning new stuffs.  <br/>
+            Find out what i'm doing <span class="now" onclick="openNav()"><strong>now</strong></span></span>
+          </p>
         </div>
       </div>
-    </div>
+
+      <div class="row d-flex  ">
+        <div class = "container-left social d-flex" >
+          <a class="mx-2" href="https://github.com/marcusbey" target="_blank"><i class="fab {{ mode }} fa-github"></i>
+          <a class="mx-2" href="https://medium.com/@rboboe" target="_blank"><i class="fab {{ mode }} fa-medium"></i>
+          <a class="mx-2" href="https://www.linkedin.com/in/romainboboe/" target="_blank"><i class="fab {{ mode }} fa-linkedin"></i></a>
+          <a class="mx-2" href="https://www.twitter.com/romainbey" target="_blank"><i class="fab {{ mode }} fa-twitter"></i></a>
+          <a class="mx-2" href="https://www.instagram.com/bey.marcus/" target="_blank"><i class="fab {{ mode }} fa-instagram"></i></a>
+        </div>
 
 
-    <div class="home-btn">
-      <a href="{% url 'now'%}" class="btn btn-primary js-scroll-trigger">Say hi!</a>
-    </div>
 
+        <div class="container-right  home-btn">
+          <a href="{% url 'now'%}" class="btn btn-primary js-scroll-trigger">Say hi!</a>
+        </div>
+      </div>
+
+  </section >
+
+  <section class="hide">
+      {% include 'about.html' %}
   </section>
+
 {% endblock %}
-class="mx-2"

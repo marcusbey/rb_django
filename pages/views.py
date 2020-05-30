@@ -24,7 +24,8 @@ def index(request):
 def home(request):
   background = rand_background();
   mode = 'dark' if background[1] == 'd' else 'light';
-  return render(request, 'home.html', {'background_url': background[0], 'mode' : mode });
+  display = 'hide'
+  return render(request, 'home.html', {'background_url': background[0], 'mode' : mode, 'display': display });
 
 def now(request):
   return render(request, 'now.html');

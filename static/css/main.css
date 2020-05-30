@@ -1,18 +1,91 @@
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 45%;
+  right: 25px;
+  font-size: 3rem;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+.now {
+  cursor:pointer;
+  color: #64a19d;
+}
+
 
  .logo-container {
 
  }
 
+ g {
+  stroke: #64a19d;
+}
+
+ .navbar-dark g {
+  stroke: rgba(255, 255, 255, 0.8);
+}
+
+ .navbar-light g {
+  stroke: rgba(0, 0, 0, 0.8);
+}
+
+.navbar-shrink g {
+  stroke: rgba(0, 0, 0, 0.8);
+}
+ /* Nav bar   */
+ .navbar-dark .navbar-nav .nav-link  {
+  color: rgba(255, 255, 255, 0.5);
+  }
+ .navbar-light .navbar-nav .nav-link  {
+  color: rgba(0, 0, 0, 0.8);
+  }
+
  .dark {
-  color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.7);
  }
 
  .light {
-  color: rgba(0, 0, 0, 0.8);
+  color: rgba(0, 0, 0, 0.9);
  }
 
 #logo-svg {
-  width: 40px;
+  width: 35px;
   height: auto;
 }
 
@@ -37,19 +110,17 @@
 }
 
 
+.row {
+justify-content: space-between;
+}
+
 .container-left {
-  display: inline-flex;
-  height: 50vh;
-  align-items: center;
+  margin: 2rem 0;
+
 }
 
 .container-right {
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50vh;
-  float: right;
+  margin: 2rem 0;
 }
 
 .master-letter {
@@ -67,7 +138,6 @@
 .intro {
   display: block;
   font-size: 1.1rem;
-  padding: 5%;
   border-radius: 5px;
   text-align: justify;
   /* background-color: rgba(255, 255, 255, 0.2); */
@@ -82,9 +152,37 @@
 }
 
 .home-btn {
-  position: absolute;
-  right: 15%;
-  bottom: 20%;
+
 }
 
 
+.hide {
+  display: none;
+  overflow: visible;
+}
+
+
+.light.fab {
+  color: #000;
+}
+
+
+.dark .fab {
+  color: #FFF;
+}
+
+
+@media screen and (max-width: 375px) {
+  #main{
+   margin-top: 6rem;
+   padding: 0;
+  }
+  .row {
+    justify-content: center;
+  }
+
+  g {
+      stroke: rgba(0, 0, 0, 0.8) !important;
+  }
+
+}

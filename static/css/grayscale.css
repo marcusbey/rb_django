@@ -46,26 +46,16 @@
     background-color: transparent;
     transition: background-color 0.3s ease-in-out;
   }
-  #mainNav .navbar-brand .dark {
+  #mainNav .navbar-brand {
     padding: .5rem 0;
     color: rgba(255, 255, 255, 0.5);
   }
 
-    #mainNav .navbar-brand .light {
-    padding: .5rem 0;
-    color: rgba(0, 0, 0, 0.5);
-  }
-
-  #mainNav .nav-link .dark{
+  #mainNav .nav-link {
     transition: none;
     padding: 2rem 1.5rem;
-    color: rgba(255, 255, 255, 0.5);
 }
-  #mainNav .nav-link .light {
-    transition: none;
-    padding: 2rem 1.5rem;
-    color: rgba(0, 0, 0, 0.5);
-  }
+
 
   #mainNav .nav-link:hover {
     color: rgba(255, 255, 255, 0.75);
@@ -133,6 +123,8 @@
   }
 }
 
+
+
 @media (min-width: 992px) {
   .masthead {
     height: 100vh;
@@ -178,6 +170,7 @@
 
 .about-section {
   padding-top: 10rem;
+  height: 100vh;
   background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
 }
 
@@ -238,6 +231,10 @@
 
 .contact-section {
   padding: 5rem 0 0;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+
 }
 
 .contact-section .card {
@@ -258,18 +255,23 @@
   width: 3rem;
 }
 
-.contact-section .social {
-  margin-top: 5rem;
+.container-left .social {
+  display: inline-flex;
+  justify-content: flex-start;
 }
 
 .contact-section .social a {
   text-align: center;
   height: 3rem;
   width: 3rem;
-  background: rgba(255, 255, 255, 0.1);
   border-radius: 100%;
   line-height: 3rem;
   color: rgba(255, 255, 255, 0.3);
+}
+
+.contact-section .social a {
+  background: rgba(255, 255, 255, 0.2);
+
 }
 
 .contact-section .social a:hover {
