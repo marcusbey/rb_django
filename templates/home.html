@@ -19,18 +19,18 @@
             background-attachment: scroll;
             background-size: cover;"
             >
-    <div class="container">
+    <div class="container home">
       <div class="row d-flex ">
         <div class="container-left col6 col-md-6 col-sm-12 col-xm-12">
           <p class="intro {{ mode }}">
             <span class="master-letter">S</span><span class="hightlight {{ mode }}">olving problems and inspiring people is what i do. I'm passionnate about tree things: technology, architecture and nature... Oooh and  i love food! yeah we all do. <br/>
             i <strong>design</strong>, i <strong>code</strong>, i <strong>built</strong>, i <strong>write</strong> and i'm still learning new stuffs.  <br/>
-            Find out what i'm doing <span class="now" onclick="openNav()"><strong>now</strong></span></span>
+             <a href="{% url 'about'}"><strong>Learn more</strong></a>
           </p>
         </div>
       </div>
 
-      <div class="row d-flex  ">
+      <div class="row d-flex">
         <div class = "container-left social d-flex" >
           <a class="mx-2" href="https://github.com/marcusbey" target="_blank"><i class="fab {{ mode }} fa-github"></i>
           <a class="mx-2" href="https://medium.com/@rboboe" target="_blank"><i class="fab {{ mode }} fa-medium"></i>
@@ -42,10 +42,11 @@
 
 
         <div class="container-right  home-btn">
-          <a href="{% url 'now'%}" class="btn btn-primary js-scroll-trigger">Say hi!</a>
+          <div onclick="openNav()" class=" now btn btn-primary js-scroll-trigger"> Now
+          </div>
         </div>
       </div>
-
+    </div>
   </section >
 
   <section class="hide">

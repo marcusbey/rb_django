@@ -90,11 +90,11 @@
 .masthead {
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
   width: 100%;
   height: auto;
   min-height: 35rem;
-  padding: 15rem 0;
+  padding: 5rem 0;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: scroll;
@@ -232,9 +232,6 @@
 .contact-section {
   padding: 5rem 0 0;
   height: 100vh;
-  display: flex;
-  align-items: center;
-
 }
 
 .contact-section .card {
@@ -255,10 +252,7 @@
   width: 3rem;
 }
 
-.container-left .social {
-  display: inline-flex;
-  justify-content: flex-start;
-}
+
 
 .contact-section .social a {
   text-align: center;

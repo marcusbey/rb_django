@@ -1,5 +1,5 @@
 .sidenav {
-  height: 100%;
+  height: 100vh;
   width: 0;
   position: fixed;
   z-index: 1;
@@ -44,8 +44,8 @@
 
 
 .now {
-  cursor:pointer;
-  color: #64a19d;
+  cursor: pointer;
+  color: #FFF;
 }
 
 
@@ -109,18 +109,35 @@
   }
 }
 
+.home {
+  height: 60vh;
+  margin-bottom: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
 
 .row {
 justify-content: space-between;
 }
 
-.container-left {
-  margin: 2rem 0;
+@media screen and (min-width: 769px) {
+  .container-left {
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 0 6rem 0 0;
+  }
+}
 
+.container-left  {
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 .container-right {
   margin: 2rem 0;
+
 }
 
 .master-letter {
@@ -140,7 +157,6 @@ justify-content: space-between;
   font-size: 1.1rem;
   border-radius: 5px;
   text-align: justify;
-  /* background-color: rgba(255, 255, 255, 0.2); */
 }
 
  .light .hightlight{
@@ -172,17 +188,43 @@ justify-content: space-between;
 }
 
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 429px) {
+
+  .home {
+    height: 80vh;
+    padding: 0 2rem;
+  }
+
   #main{
    margin-top: 6rem;
    padding: 0;
   }
   .row {
     justify-content: center;
+    display: -ms-flexbox;
+    display: flex;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .container-left {
+    margin: 1rem 1rem;
+    padding: 0 3rem;
   }
 
   g {
       stroke: rgba(0, 0, 0, 0.8) !important;
   }
+}
+
+
+@media screen and (max-width: 769px) {
+  g {
+      stroke: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .navbar-light g {
+      stroke: rgba(0, 0, 0, 0.8);
+  }
 
 }
+
