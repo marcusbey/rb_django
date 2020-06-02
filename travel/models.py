@@ -4,7 +4,7 @@ from django.contrib.gis.db import models
 # Create your models here.
 class Place(models.Model):
   _next = 'Going'
-  _now = 'Based'
+  _now = 'Base'
   _done = 'Been'
   _noth = 'Not'
   place_status = (
@@ -13,7 +13,7 @@ class Place(models.Model):
     (_done, 'Visited'),
     (_noth, 'No plan yet'),
     )
-  name = models.CharField(max_length = 50)
+  name = models.CharField(max_length = 30, null=True)
   location = models.PointField()
   status = models.CharField(max_length = 6, choices = place_status, default = _noth)
 
@@ -31,7 +31,7 @@ class Travel(models.Model):
     (work, 'For work'),
     (visit, 'For visit'),
     )
-  name = models.ManyToManyField(Place)
+  name = models.CharField(max_length = 30, null=True)
   start = models.DateField()
   end = models.DateField()
   status = models.CharField(max_length = 6 , choices = status_choice, default = base)

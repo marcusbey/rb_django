@@ -5,9 +5,5 @@ from .models import Travel, Place
 
 
 @admin.register(Travel)
-
 class TravelAdmin(OSMGeoAdmin):
-  def location(self, name):
-    return "\n".join([p.places for p in name.place.all()])
-
-  list_display = ('location', 'status')
+  list_display = ('name', 'status')
