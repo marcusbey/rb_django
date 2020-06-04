@@ -10,7 +10,8 @@ def rand_background():
   dir_path = "static/img/backgrounds/"
   background_files = os.listdir(dir_path)
   for name in background_files:
-    background_urls.append('../' + dir_path + name)
+    if name[0] != '.':
+      background_urls.append('../' + dir_path + name)
   image = random.choice(background_urls)
   return [image, image[26:27]];
 

@@ -83,7 +83,7 @@ DATABASES = {
         'USER': 'supermarcus',
         'PASSWORD': 'Comxmal1985',
         'HOST': 'localhost',
-        'PORT': 5432,
+        'PORT': 5433,
     }
 }
 
