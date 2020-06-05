@@ -5,11 +5,11 @@ from .models import Location, Travel
 
 @admin.register(Location)
 class LocationAdmin(OSMGeoAdmin):
-  list_display = ('name', 'position')
+  list_display = ('location_name', 'position')
 
 
 @admin.register(Travel)
 class TravelAdmin(admin.ModelAdmin):
-  list_display = ('place', 'status')
+  list_display = ('city', 'status')
 
 

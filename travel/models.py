@@ -4,21 +4,24 @@ from django.contrib.gis.db import models
 # Create your models here.
 class Location(models.Model):
   _next = 'Going'
-  _now = 'Base'
+  _now = 'Home'
   _done = 'Been'
+  _old = 'Lived'
   _noth = 'Not'
-  place_status = (
+  location_status = (
     (_next, 'Planning to visit'),
     (_now, 'Located now'),
     (_done, 'Visited'),
+    (_old, 'Used to live here'),
     (_noth, 'No plan yet'),
     )
-  name = models.CharField(max_length = 30, null=True)
+  location_name = models.CharField(max_length=38, null=True)
+  country = models.CharField(max_length=38, null=True)
   position = models.PointField()
-  status = models.CharField(max_length = 6, choices = place_status, default = _noth)
+  status = models.CharField(max_length=6, choices = location_status, default = _noth)
 
   def __str__(self):
-    return self.name
+    return self.location_name
 
 
 
@@ -32,7 +35,7 @@ class Travel(models.Model):
     (work, 'For work'),
     (visit, 'For visit'),
     )
-  place = models.ForeignKey(
+  city = models.ForeignKey(
               Location,
               on_delete=models.CASCADE,
               default = None
@@ -43,8 +46,7 @@ class Travel(models.Model):
   info = models.TextField(max_length = 300)
 
   def __str__(self):
-    return self.place.name
-
+    return self.city.location_name
   class Meta:
     verbose_name_plural = "Travels"
 
