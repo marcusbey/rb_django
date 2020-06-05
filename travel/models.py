@@ -15,8 +15,8 @@ class Location(models.Model):
     (_old, 'Used to live here'),
     (_noth, 'No plan yet'),
     )
-  location_name = models.CharField(max_length=38, null=True)
-  country = models.CharField(max_length=38, null=True)
+  location_name = models.CharField(max_length=50, null=True)
+  country = models.CharField(max_length=50, null=True)
   position = models.PointField()
   status = models.CharField(max_length=6, choices = location_status, default = _noth)
 
