@@ -11,6 +11,8 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
+import django_extensions
+
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -31,6 +33,7 @@ ALLOWED_HOSTS = ['*']
 # Application definition
 
 INSTALLED_APPS = [
+
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -40,6 +43,10 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
+    'django_extensions',
+
+
+
 ]
 
 MIDDLEWARE = [
@@ -133,3 +140,18 @@ MEDIA_URL = '/media/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+
+GRAPH_MODELS = {
+  'all_applications': True,
+  'group_models': True,
+}
+"""
+LEAFLET_CONFIG = {
+    'SPATIAL_EXTENT': (5.0, 44.0, 7.5, 46),
+    'DEFAULT_CENTER': (6.0, 45.0),
+    'DEFAULT_ZOOM': 16,
+    'MIN_ZOOM': 3,
+    'MAX_ZOOM': 18,
+    'ATRIBUTION_PREFIX': 'Inspired by remotejungle.co',
+}
+"""

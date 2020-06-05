@@ -1,6 +1,7 @@
 from django.contrib import admin
-from django.contrib.gis.admin import OSMGeoAdmin
 from .models import Location, Travel
+from django.contrib.gis.admin import OSMGeoAdmin
+#from leaflet.admin import LeafletGeoAdmin
 # Register your models here.
 
 @admin.register(Location)
