@@ -1,7 +1,7 @@
 # pages/urls.py
 from django.urls import path
-from . import views
+from travel.views import Traveler
 
 urlpatterns = [
-  path('travel/', views.Traveler.as_view(), name = 'travel'),
+  path('', Traveler.as_view(), name = 'travel'),
 ]

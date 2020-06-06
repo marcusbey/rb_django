@@ -1,0 +1,14 @@
+{% load static %}
+
+{% block content %}
+  <p>Hello This is me again!!!</p>
+  <p>Here is my city name : </p>
+    {% for item in object_list %}
+      <h2> {{ item.city}}</h2>
+      <p> {{ item.city.country}} <br>
+           {{ item.info}}</p>
+
+    {% endfor %}
+
+  <p>This is an other blog text</p>
+{% endblock %}

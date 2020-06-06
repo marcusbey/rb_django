@@ -5,6 +5,14 @@ from django.shortcuts import render
 # pages/views.py
 from django.views.generic import TemplateView
 
+'''
+class Traveler(generic.ListView):
+    template_name = "travel_list.html"
+    model = Travel
+    place = "me"
+    queryset = model.objects.all()
+'''
+
 def rand_background():
   background_urls = []
   dir_path = "static/img/backgrounds/"

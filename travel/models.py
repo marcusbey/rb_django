@@ -23,8 +23,6 @@ class Location(models.Model):
   def __str__(self):
     return self.location_name
 
-
-
 class Travel(models.Model):
   base = 'base'
   work = 'work'

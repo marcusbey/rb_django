@@ -6,7 +6,8 @@ from .models import Travel, Location
 # Create your views here.
 
 class Traveler(generic.ListView):
-    model = Location
+    template_name = "travel_list.html"
+    model = Travel
     place = "me"
-    queryset = Location.location_name
-    template_name = "travel.html"
+    queryset = model.objects.all()
+
