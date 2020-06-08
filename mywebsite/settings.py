@@ -44,9 +44,7 @@ INSTALLED_APPS = [
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
     'django_extensions',
-
-
-
+    'leaflet',
 ]
 
 MIDDLEWARE = [
@@ -145,13 +143,14 @@ GRAPH_MODELS = {
   'all_applications': True,
   'group_models': True,
 }
-"""
+
+
 LEAFLET_CONFIG = {
     'SPATIAL_EXTENT': (5.0, 44.0, 7.5, 46),
     'DEFAULT_CENTER': (6.0, 45.0),
-    'DEFAULT_ZOOM': 16,
+    'DEFAULT_ZOOM': 3,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 18,
     'ATRIBUTION_PREFIX': 'Inspired by remotejungle.co',
 }
-"""
+

@@ -1,17 +1,13 @@
 import random, os
 from django.shortcuts import render
+from django.views import generic
+from django.contrib.gis.geos import Point
+from travel.models import Travel, Location
 
 # Create your views here.
 # pages/views.py
 from django.views.generic import TemplateView
 
-'''
-class Traveler(generic.ListView):
-    template_name = "travel_list.html"
-    model = Travel
-    place = "me"
-    queryset = model.objects.all()
-'''
 
 def rand_background():
   background_urls = []
@@ -34,7 +30,16 @@ def home(request):
   background = rand_background();
   mode = 'dark' if background[1] == 'd' else 'light';
   display = 'hide'
-  return render(request, 'home.html', {'background_url': background[0], 'mode' : mode, 'display': display });
+  qs = Travel.objects.all()
+  context = {
+            'background_url': background[0],
+            'mode' : mode,
+            'display': display,
+            'travels_list' : qs
+            }
+  return render(request, 'home.html', context);
+
+
 
 def now(request):
   return render(request, 'now.html');
