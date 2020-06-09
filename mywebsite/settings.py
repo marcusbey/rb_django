@@ -147,11 +147,9 @@ GRAPH_MODELS = {
 
 
 LEAFLET_CONFIG = {
-
-    'DEFAULT_CENTER': (-.230, 45.0),
-    'DEFAULT_CENTER': (6.0, 45.0),
-    'DEFAULT_ZOOM': 3,
-    'MIN_ZOOM': 3,
+    'DEFAULT_CENTER': (0, 0),
+    'DEFAULT_ZOOM': 2,
+    'MIN_ZOOM': 2,
     'MAX_ZOOM': 18,
     'TILES': 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 }

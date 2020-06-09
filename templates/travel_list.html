@@ -3,13 +3,16 @@
 
 {% block content %}
 
-  <div id="travel_map"> {% leaflet_map "location_map" callback="window.map_init" %}
+  <div id="travel_map">
+    {% leaflet_map "location_map" callback="window.map_init_basic" %}
+  </div>
+
   <script type="text/javascript">
-    L.tileLayer('//{s}.tile.osm.org/{z}/{s}/{y}.png').addTo(location_map);
+        function map_init_basic (map, options) {
+            L.marker([45.5, -73.5]).addTo(map);
+        }
     {% for e in object_list %}
-      L.marker({{e.lat_lng}}).addTo(location_map).bindPopup('{{e}}');
+      L.marker({{ e.city.position }}).addTo(location_map);
     {% endfor %}
   </script>
-
-  </div>
 {% endblock %}
