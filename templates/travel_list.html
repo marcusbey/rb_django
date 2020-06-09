@@ -1,10 +1,15 @@
 {% load static %}
-{%  load leaflet_tags  %}
+{% load leaflet_tags %}
 
 {% block content %}
 
-  <div id="travel_map"> {% leaflet_map "location_map" %}
-
+  <div id="travel_map"> {% leaflet_map "location_map" callback="window.map_init" %}
+  <script type="text/javascript">
+    L.tileLayer('//{s}.tile.osm.org/{z}/{s}/{y}.png').addTo(location_map);
+    {% for e in object_list %}
+      L.marker({{e.lat_lng}}).addTo(location_map).bindPopup('{{e}}');
+    {% endfor %}
+  </script>
 
   </div>
 {% endblock %}

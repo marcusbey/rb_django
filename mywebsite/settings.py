@@ -92,6 +92,7 @@ DATABASES = {
     }
 }
 
+FORM_RENDERER = 'django.forms.renderers.DjangoTemplates'
 
 # Password validation
 # https://docs.djangoproject.com/en/3.0/ref/settings/#auth-password-validators
@@ -146,11 +147,12 @@ GRAPH_MODELS = {
 
 
 LEAFLET_CONFIG = {
-    'SPATIAL_EXTENT': (5.0, 44.0, 7.5, 46),
+
+    'DEFAULT_CENTER': (-.230, 45.0),
     'DEFAULT_CENTER': (6.0, 45.0),
     'DEFAULT_ZOOM': 3,
     'MIN_ZOOM': 3,
     'MAX_ZOOM': 18,
-    'ATRIBUTION_PREFIX': 'Inspired by remotejungle.co',
+    'TILES': 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 }
 

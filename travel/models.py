@@ -22,6 +22,10 @@ class Location(models.Model):
 
   def __str__(self):
     return self.location_name
+  @property
+  def lat_lng(self):
+    return list(getattr(self.position, 'coords', [])[::-1])
+
 
 class Travel(models.Model):
   base = 'base'

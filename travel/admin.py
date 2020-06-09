@@ -6,8 +6,10 @@ from leaflet.admin import LeafletGeoAdmin
 
 @admin.register(Location)
 class LocationAdmin(LeafletGeoAdmin):
+  default_lon=1400000
+  default_lat=7495000
+  default_zoom=12
   list_display = ('location_name', 'position')
-
 
 @admin.register(Travel)
 class TravelAdmin(admin.ModelAdmin):
