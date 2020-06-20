@@ -154,3 +154,8 @@ LEAFLET_CONFIG = {
     'TILES': 'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
 }
 
+
+# Configure Django App for Heroku.
+import django_heroku
+django_heroku.settings(locals())
+
