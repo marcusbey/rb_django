@@ -11,6 +11,7 @@ function openNav() {
    }
   document.getElementById("path").style.stroke = "#FFF";
   document.querySelector(".fixed-top").style.zIndex = 0;
+  document.querySelector(".closebtn").style.opacity = 1;
 }
 
 function closeNav() {

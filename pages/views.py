@@ -45,7 +45,8 @@ def now(request):
   return render(request, 'now.html');
 
 def about(request):
-  return render(request, 'about.html');
+  mode = 'dark'
+  return render(request, 'about.html', {'mode' : mode });
 
 def projects(request):
   return render(request, 'projects.html');

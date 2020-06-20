@@ -55,6 +55,14 @@
 
   <!-- Main Jscode-->
   <script src="{% static 'js/app.js' %}"></script>
+  <script>
+      window.addEventListener("map:init", function (e) {
+          var detail = e.detail;
+
+          L.marker([10.5, 30.5]).addTo(detail.map);
+
+      }, false);
+  </script>
 
 </body>
 

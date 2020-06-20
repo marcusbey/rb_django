@@ -21,11 +21,13 @@
 
 .sidenav .closebtn {
   position: absolute;
+  opacity: 0;
   top: 0;
   right: 25px;
   font-size: 3rem;
   margin-left: 50px;
   z-index: 1033;
+  transition: all 1s ease;
 }
 
 #main {
@@ -33,10 +35,6 @@
   padding: 16px;
 }
 
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
 
 #travel_map {
  height: 100%;
@@ -54,10 +52,14 @@
   color: #FFF;
 }
 
+.logo {
+  stroke: rgba(0, 0, 0, 0.8);
+}
 
- .logo-container {
+.logo-white {
+  stroke: rgba(255, 255, 255, 0.8);
+}
 
- }
 
  g {
   stroke: #64a19d;
@@ -129,13 +131,6 @@ justify-content: space-between;
 }
 
 
-@media screen and (min-width: 769px) {
-  .container-left {
-    margin: 2rem 1rem 2rem 1rem;
-    padding: 0 6rem 0 0;
-  }
-}
-
 .container-left  {
   display: inline-flex;
   justify-content: flex-start;
@@ -195,6 +190,165 @@ justify-content: space-between;
 }
 
 
+.leaflet-container {  /* all maps */
+    width:  100%;
+    height:  100%;
+}
+
+#specialbigmap {
+    height: 100%;
+}
+
+/* Resize the "display_raw" textbox */
+.django-leaflet-raw-textarea {
+    width: 100%;
+}
+
+
+
+.about-section {
+  padding-top: 10rem;
+  background: linear-gradient(to bottom, #161616 0%, rgba(22, 22, 22, 0.9) 75%, rgba(22, 22, 22, 0.8) 100%);
+}
+
+.about-section p {
+  margin-bottom: 5rem;
+}
+
+.about_intro {
+  height: 80vh;
+  display: flex-end;
+  align-items: center;
+}
+
+.about-body  {
+  font-size: 1.2rem;
+  padding: 5rem 0;
+}
+
+.about-body ul li {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 40px;
+  width: 50px;
+  }
+
+.ab-right  {
+
+}
+
+.ab-left {
+
+}
+
+.about-intro>p {
+  width: 30vw;
+}
+
+.about-intro {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-intro img{
+  /*
+  margin: 4rem 2rem;
+  position: relative;
+  left: 25vw;
+  float: right;
+  clear: both;
+  padding-bottom: 3rem;
+*/
+
+}
+
+.field-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14vw;
+  position: relative;
+  top: -4rem;
+  left: 0vw;
+  background-color: grey;
+  border-radius: 50%;
+  width: 18vw;
+  height: 18vw;
+
+
+}
+
+.field h1 {
+  position: relative;
+  top: 0rem;
+  left: 5vw;
+  font-size: 8vw;
+  color: red;
+
+}
+
+
+.projects-section {
+  padding: 10rem 0;
+}
+
+.projects-section .featured-text {
+  padding: 2rem;
+}
+
+
+.leading {
+  font-size: 10vw;
+}
+
+
+
+.projects-section .project-text {
+  padding: 3rem;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .projects-section .project-text {
+    padding: 5rem;
+  }
+  .projects-section .project-text hr {
+    border-color: #64a19d;
+    border-width: .25rem;
+    width: 30%;
+  }
+  .projects-section .featured-text {
+    padding: 0 0 0 2rem;
+    border-left: 0.5rem solid #64a19d;
+  }
+}
+
+
+@media screen and (min-width: 769px) {
+  .container-left {
+    margin: 2rem 1rem 2rem 1rem;
+    padding: 0 6rem 0 0;
+  }
+}
+
+
+@media screen and (max-width: 769px) {
+  g {
+      stroke: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .navbar-light g {
+      stroke: rgba(0, 0, 0, 0.8);
+  }
+}
+
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
 @media screen and (max-width: 429px) {
 
   .home {
@@ -223,29 +377,3 @@ justify-content: space-between;
   }
 }
 
-
-@media screen and (max-width: 769px) {
-  g {
-      stroke: rgba(0, 0, 0, 0.8) !important;
-  }
-
-  .navbar-light g {
-      stroke: rgba(0, 0, 0, 0.8);
-  }
-}
-
-
-
-.leaflet-container {  /* all maps */
-    width:  100%;
-    height:  100%;
-}
-
-#specialbigmap {
-    height: 100%;
-}
-
-/* Resize the "display_raw" textbox */
-.django-leaflet-raw-textarea {
-    width: 100%;
-}

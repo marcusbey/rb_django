@@ -37,6 +37,8 @@ class Travel(models.Model):
     (work, 'For work'),
     (visit, 'For visit'),
     )
+
+  # A afficher en ordre Alphabetic
   city = models.ForeignKey(
               Location,
               on_delete=models.CASCADE,
