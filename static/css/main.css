@@ -1,12 +1,17 @@
+/*
+//////////////////////////////SIDE BAR
+*/
 .sidenav {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
   width: 0;
   position: fixed;
   top: 0;
   left: 0;
   background-color: #111;
-  overflow: hidden;
-  z-index: 1;
+  z-index: 0;
   transition: 0.5s;
 }
 
@@ -30,11 +35,33 @@
   transition: all 1s ease;
 }
 
-#main {
-  transition: margin-left .5s;
-  padding: 16px;
+/*
+//////////////////////////////NOW
+*/
+#now {
+  width:70%;
+  height: 90%;
+  margin-top: 20%;
+  display: flex;
+  justify-content: center;
+  overflow: auto;
+  position: relative;
+  margin: 0 auto;
+  padding-top: 5rem;
 }
 
+.now-section {
+    padding: 2rem 2rem;
+}
+
+/*
+//////////////////////////////MAP
+*/
+
+#app {
+  width: 30%;
+  height: 100%;
+}
 
 #travel_map {
  height: 100%;
@@ -51,6 +78,27 @@
   cursor: pointer;
   color: #FFF;
 }
+
+/*
+////////////////////////////// LEAFLET
+*/
+
+.leaflet-control-scale-line {
+  border: 0px solid #777; */
+}
+
+
+.leaflet-right {
+  font-size: 1rem;
+  text-decoration: none;
+  display: none;
+
+}
+
+
+/*
+//////////////////////////////NAV BAR
+*/
 
 .logo {
   stroke: rgba(0, 0, 0, 0.8);
@@ -117,6 +165,11 @@
   }
 }
 
+/*
+//////////////////////////////MAIN SECTION
+*/
+
+
 .home {
   height: 60vh;
   margin-bottom: 5rem;
@@ -153,6 +206,13 @@ justify-content: space-between;
   clear: both;
 
 }
+
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
 
 .intro {
   display: block;

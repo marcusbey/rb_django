@@ -44,6 +44,7 @@ def home(request):
 def now(request):
   return render(request, 'now.html');
 
+
 def about(request):
   mode = 'dark'
   return render(request, 'about.html', {'mode' : mode });

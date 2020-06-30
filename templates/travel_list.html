@@ -2,8 +2,7 @@
 {% load leaflet_tags %}
 
 {% block content %}
-
-  <ul>
+  <ul class = "hide">
     {% for position in travels_list%}
     <li>{{position}}, {{ position.city.position}}</li>
     {%  endfor %}

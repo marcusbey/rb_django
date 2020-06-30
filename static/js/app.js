@@ -1,29 +1,33 @@
-function openNav() {
+var mySidePage = document.getElementById("mySidenav");
+var main = document.getElementById("main");
+var pathLogo = document.getElementById("path");
+var mainNav = document.getElementById("mainNav");
+var fixedTop = document.querySelector(".fixed-top");
+
+var openNav =()=> {
   var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   if (screenWidth < 768) {
-    document.getElementById("mySidenav").style.height = "50vh";
-    document.getElementById("main").style.marginTop = "50vh";
+    mySidePage.style.height = "50vh";
+    main.style.marginTop = "50vh";
   } else {
-  document.getElementById("mySidenav").style.width = "50vw";
-  document.getElementById("main").style.marginLeft = "50vw";
-  document.documentElement.style.overflow = "hidden";
+  mySidePage.style.width = "50vw";
+  main.style.marginLeft = "50vw";
+//  document.documentElement.style.overflow = "hidden";
   document.body.style.overflow = "hidden";
    }
   document.getElementById("path").style.stroke = "#FFF";
-  document.querySelector(".fixed-top").style.zIndex = 0;
+  fixedTop.style.zIndex = 0;
   document.querySelector(".closebtn").style.opacity = 1;
-}
+};
 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  document.getElementById("main").style.marginLeft= "0";
+var closeNav = () => {
+  mySidePage.style.width = "0";
+  main.style.marginLeft= "0";
 
-
-  document.getElementById("mainNav").className.includes("navbar-dark") ?
-  document.getElementById("path").style.stroke = "rgba(255, 255, 255, 0.8)" :
-  document.getElementById("path").style.stroke = "rgba(0, 0, 0, 0.8)";
-  document.querySelector(".fixed-top").style.zIndex = 1030;
-
+  mainNav.className.includes("navbar-dark") ?
+  pathLogo.style.stroke = "rgba(255, 255, 255, 0.8)" :
+  pathLogo.style.stroke = "rgba(0, 0, 0, 0.8)";
+  fixedTop.style.zIndex = 1030;
 }
 
 
