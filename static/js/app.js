@@ -4,6 +4,11 @@ var pathLogo = document.getElementById("path");
 var mainNav = document.getElementById("mainNav");
 var fixedTop = document.querySelector(".fixed-top");
 
+function  fixed(e){
+  var element = document.querySelector(e);
+  element.style.position = 'fixed';
+}
+
 var openNav =()=> {
   var screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   if (screenWidth < 768) {
@@ -18,6 +23,7 @@ var openNav =()=> {
   document.getElementById("path").style.stroke = "#FFF";
   fixedTop.style.zIndex = 0;
   document.querySelector(".closebtn").style.opacity = 1;
+
 };
 
 var closeNav = () => {
@@ -31,5 +37,4 @@ var closeNav = () => {
 }
 
 
-
-
+// Add evel listiner to the header.

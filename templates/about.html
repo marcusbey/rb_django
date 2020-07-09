@@ -1,63 +1,55 @@
 {% extends 'index.html' %}
 {% load static %}
- {% load leaflet_tags %}
 
 {% block content %}
   <!-- About Section -->
   <section id="about" class="{{ mode }}" >
-      <header class="about-title dark">
-        <h1 class="leading">life as a <br>continuous <br>challenge </h1>
-      </header>
+    <header class="about-header ">
+      <h1 class="leading">life as a <br>continuous <br>challenge </h1>
+    </header>
 
-      <section class="about-section dark">
-        <div class="about-intro d-flex " >
-          <p>
-            Going from architecture to sofware developpement have been a big shit. although i knew since my first year in architecture scholol that it was the right thing to do. having a vision in life is very important as well as working you ass of to make it happen.
-          </p>
-          <img class = "img-fluid mb-3 mb-lg-0" src=" {% static 'img/demo-image-01.jpg' %} ">
-          <p class="about-intro ">
-            Lorem Ipsum is simply dummy text of the printing and
-            typesetting industry. Lorem Ipsum has been the industry's
-            standard dummy text ever since the 1500s, when an unknown
-            printer took a galley of type and scrambled it to make a
-            type specimen book. It has survived not only five centuries,
-            but also the leap into electronic typesetting, remaining
-            essentially unchanged. It was popularised in the 1960s
-            with the release of Letraset sheets containing Lorem Ipsum
-            passages, and more recently with desktop publishing software
-            like Aldus PageMaker including versions of Lorem Ipsum.
-          </p>
-        </div>
-      </section>
+    <section class="about-body black">
+      <div class="about-intro" >
+        <p>
+          Going from architecture to sofware developpement have been a big shit. although i knew since my first year in architecture scholol that it was the right thing to do. having a vision in life is very important as well as working you ass of to make it happen. <br><br>
+           {% lorem 120 w random %}
+        </p>
 
-      <section class="about-section container dark">
-        <div class="field">
-          <div class="justify-content-start no-gutters mb-6 mb-lg-0">
-            <!-- <div>
-            <span class="field-number">1</span>
-            </div>
-            <div><h1>Software Ingineer</h1></div>
-            -->
-            <div class="about-body left">
-              <p>
-                Lorem Ipsum is simply dummy text of the printing and
-                typesetting industry. Lorem Ipsum has been the industry's
-                standard dummy text ever since the 1500s, when an unknown
-                printer took a galley of type and scrambled it to make a
-                type specimen book.
-              </p>
+        <img class = "" src=" {% static 'img/about-profile2.jpg' %} ">
+        <p class="about-intro note left">
+           {% lorem 200 w random %}
+        </p>
+      </div>
+    </section>
 
-              <ul>
-                <li><i class="fab {{ mode }} fa-github"></i></li>
-                <li><i class="fab {{ mode }} fa-github"></i></li>
-                <li><i class="fab {{ mode }} fa-github"></i></li>
-                <li><i class="fab {{ mode }} fa-github"></i></li>
-              </ul>
-            </div>
-            <button class="hire">Hire me</button>
+    <section class="about-body white">
+      <div class="">
+        <div class="">
+         <div>
+          <span class="field-number">1</span>
           </div>
+          <div><h1>Software Ingineer</h1></div>
+
+          <div class="">
+            <p>
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a
+              type specimen book.
+            </p>
+
+            <ul>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+            </ul>
+          </div>
+          <button class="hire">Hire me</button>
         </div>
-      </section>
+      </div>
+    </section>
 
   </section>
 

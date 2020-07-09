@@ -1,28 +1,15 @@
 {% load static %}
-{% load leaflet_tags %}
 
 {% block content %}
   <ul class = "hide">
-
   </ul>
-  <div id="travel_map">
-    {% leaflet_map "location_map" %}
-    <script>
-      map = L.map('location_map').setView([51.505, -0.09], 2);
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
+  <div id="travel_map"></div>
 
-      L.marker([51.5, -0.09]).addTo(map).bindPopup(
-         'I live here!'
-      ).openPopup();
+  <script>
 
-      {% for place in travels_list %}
-        console.log( {{ place.city.position.y }} );
-        L.marker([ {{ place.city.position.y }} , {{ place.city.position.x }} ]).addTo(map).bindPopup('{{place.city.location_name}}');
-      {% endfor %}
-    </script>
+  </script>
 
   </div>
-
 
 
 
