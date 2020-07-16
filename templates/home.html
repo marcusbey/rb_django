@@ -42,14 +42,16 @@
           <a class="mx-2" href="https://www.linkedin.com/in/romainboboe/" target="_blank"><i class="fab {{ mode }} fa-linkedin"></i></a>
           <a class="mx-2" href="https://www.twitter.com/romainbey" target="_blank"><i class="fab {{ mode }} fa-twitter"></i></a>
           <a class="mx-2" href="https://www.instagram.com/bey.marcus/" target="_blank"><i class="fab {{ mode }} fa-instagram"></i></a>
+          <a class="mx-2 {{ mode }} js-scroll-trigger" href=" {% url 'contact' %}"> <i class="far {{ mode }} fa-envelope"></i></a>
         </div>
-
-
 
         <div class="container-right  home-btn">
           <div onclick="openNav()" class=" now btn btn-primary js-scroll-trigger"> Now
           </div>
         </div>
+      </div>
+      <div class="chevron {{ mode }}">
+        <a class="nav-link {{ mode }} js-scroll-trigger" href="{% url 'about' %}"><i class="fas fa-chevron-down"></i></a>
       </div>
     </div>
   </section >

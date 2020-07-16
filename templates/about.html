@@ -2,55 +2,44 @@
 {% load static %}
 
 {% block content %}
-  <!-- About Section -->
-  <section id="about" class="{{ mode }}" >
-    <header class="about-header ">
+  <section id="more" class="{{ mode }}">
+    <!-- About Section -->
+    <header class="about-header">
       <h1 class="leading">life as a <br>continuous <br>challenge </h1>
     </header>
 
-    <section class="about-body black">
-      <div class="about-intro" >
-        <div>
-          <p class="note black background">
-            Going from architecture to sofware developpement have been a big shit. although i knew since my first year in architecture scholol that it was the right thing to do. having a vision in life is very important as well as working you ass of to make it happen. <br><br>
+    <section id="intro">
+      <section class="about-body">
+        <div class="row no-gutters">
+          <div class="about-intro col-lg-6" >
+            <img class = "about-profile" src=" {% static 'img/about-profile2.jpg' %} ">
+            <p class="about note black background">
               Going from architecture to sofware developpement have been a big shit. although i knew since my first year in architecture scholol that it was the right thing to do. having a vision in life is very important as well as working you ass of to make it happen.
-
-              <br><br>
-              Going from architecture to sofware developpement have been a big shit. although i knew since my first year in architecture scholol that it was the right thing to do. having a vision in life is very important as well as working you ass of to make it happen.
-               Going from architecture to sofware developpement have been a big shit. although i knew since my first year in architecture scholol that it was the right thing to do. having a vision in life is very important as well as working you ass of to make it happen.
-          </p>
-          <img class = "about-profile" src=" {% static 'img/about-profile2.jpg' %} ">
-        </div>
-
-        <div>
-          <div class="float-box"></div>
-          <p class="note left">
-            {% lorem 200 w random %}
-          </p>
-        </div>
-
-      </div>
-    </section>
-
-    <section class="about-field white">
-      <header class="leading-field">
-          <h1 class="field">Software <br>Ingineer</h1>
-      </header>
-      <div class="about-field-info">
-          <div>
-            <h2>Experiences</h2>
-            <p class="note white">
-              Lorem Ipsum is simply dummy text of the printing and
-              typesetting industry. Lorem Ipsum has been the industry's
-              standard dummy text ever since the 1500s, when an unknown
-              printer took a galley of type and scrambled it to make a
-              type specimen book.
-
-              {% lorem 50 w random %}
             </p>
           </div>
+          <div class="about-pitch no-gutters col-lg-6">
+            <h3> Opportunity</h3>
+            <p>{% lorem 50 w random %}</p>
+            <h3> Solution</h3>
+            <p>{% lorem 100 w random %}</p>
 
-          <div>
+          </div>
+        </div>
+
+        <div class="about-field">
+
+        </div>
+      </section>
+    </section>
+
+    <!-- work Section -->
+    <section id="work">
+      <section class="about-field software inter-field white">
+        <div class="row field-nav left">
+          <header class="leading field">
+              <h1 class="field">Software <br>Ingineer</h1>
+          </header>
+          <div class="about-skills ">
             <h2>Tools</h2>
             <ul>
               <li><i class="fab {{ mode }} fa-github"></i></li>
@@ -60,6 +49,25 @@
             </ul>
           </div>
           <div>
+            <h5><a href="">links</a></h5>
+          </div>
+          <button class="hire">Hire me</button>
+        </div>
+
+        <div class="field-info row">
+          <div class="field-info-left"></div>
+          <div class="d-container field-info-right about-experience">
+            <h2>Experiences</h2>
+            <p class="note white">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a
+              type specimen book.
+
+              {% lorem 150 w random %}
+            </p>
+
             <h2>Projects</h2>
             <ul>
               <li>projetct</li>
@@ -68,88 +76,196 @@
               <li>projetct</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section class="about-field software inter-field white">
+        <div class="row field-nav left">
+          <header class="leading field">
+              <h1 class="field">Software <br>Ingineer</h1>
+          </header>
+          <div class="about-skills ">
+            <h2>Tools</h2>
+            <ul>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+            </ul>
+          </div>
+          <div>
+            <h5><a href="">links</a></h5>
+          </div>
           <button class="hire">Hire me</button>
+        </div>
 
+        <div class="field-info row">
+          <div class="field-info-left"></div>
+          <div class="d-container field-info-right about-experience">
+            <h2>Experiences</h2>
+            <p class="note white">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a
+              type specimen book.
 
-      </div>
+              {% lorem 150 w random %}
+            </p>
 
+            <h2>Projects</h2>
+            <ul>
+              <li>projetct</li>
+              <li>projetct</li>
+              <li>projetct</li>
+              <li>projetct</li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
+      <section class="about-field software inter-field white">
+        <div class="row field-nav left">
+          <header class="leading field">
+              <h1 class="field">Software <br>Ingineer</h1>
+          </header>
+          <div class="about-skills ">
+            <h2>Tools</h2>
+            <ul>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+              <li><i class="fab {{ mode }} fa-github"></i></li>
+            </ul>
+          </div>
+          <div>
+            <h5><a href="">links</a></h5>
+          </div>
+          <button class="hire">Hire me</button>
+        </div>
+
+        <div class="field-info row">
+          <div class="field-info-left"></div>
+          <div class="d-container field-info-right about-experience">
+            <h2>Experiences</h2>
+            <p class="note white">
+              Lorem Ipsum is simply dummy text of the printing and
+              typesetting industry. Lorem Ipsum has been the industry's
+              standard dummy text ever since the 1500s, when an unknown
+              printer took a galley of type and scrambled it to make a
+              type specimen book.
+
+              {% lorem 150 w random %}
+            </p>
+
+            <h2>Projects</h2>
+            <ul>
+              <li>projetct</li>
+              <li>projetct</li>
+              <li>projetct</li>
+              <li>projetct</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </section>
 
-
-    <section class="about-field white">
-      <header class="leading-field2">
-          <h1 class="field">Graphic <br> Designer</h1>
-      </header>
-      <div class="about-field-info">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a
-          type specimen book.
-        </p>
-
-        <ul>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-        </ul>
+    <!-- Soft Skills Section-->
+    <section id="softskills">
+      <div class="row">
+        <div>
+          <h3>Designer</h3>
+          <h5><a href="#designer">Graphic design and Web Design</a></h5>
+          <p class="note ">
+            {% lorem 50 w random %}
+          </p>
+        </div>
+        <div>
+          <h3><a href="#architecture">Architecte</a> </h3>
+          <h5>Designing building Building</h5>
+          <p class="note">
+            {% lorem 50 w random %}
+          </p>
+        </div>
+        <div>
+          <h3><a href="#Life">Life Hacker</a> </h3>
+          <h5>Improvement and sharing culture</h5>
+          <p class="note">
+            {% lorem 50 w random %}
+          </p>
+        </div>
       </div>
-      <button class="hire">Hire me</button>
-
     </section>
 
+    <!-- Contact Section -->
+    <section id="contact">
+      <section id="signup" class="signup-section">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-10 col-lg-8 mx-auto text-center">
 
-    <section class="about-field white">
-      <header class="leading-field3">
-          <h1 class="field">Architect /<br> Designer</h1>
-      </header>
-      <div class="about-field-info">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a
-          type specimen book.
-        </p>
+              <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
+              <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
 
-        <ul>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-        </ul>
-      </div>
-      <button class="hire">Hire me</button>
+              <form class="form-inline d-flex">
+                <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
+                <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
+              </form>
 
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section bg-black">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                  <h4 class="text-uppercase m-0">Address</h4>
+                  <hr class="my-4">
+                  <div class="small text-black-50">Montreal</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-envelope text-primary mb-2"></i>
+                  <h4 class="text-uppercase m-0">Email</h4>
+                  <hr class="my-4">
+                  <div class="small text-black-50">
+                    <a href="#">hello@romainboboe.com</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                  <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                  <h4 class="text-uppercase m-0">Phone</h4>
+                  <hr class="my-4">
+                  <div class="small text-black-50">+33 665 253 266</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="social d-flex justify-content-center">
+            <a class="mx-2" href="https://github.com/marcusbey" target="_blank"><i class="fab fa-github"></i>
+            <a class="mx-2" href="https://medium.com/@rboboe" target="_blank"><i class="fab fa-medium"></i>
+            <a class="mx-2" href="https://www.linkedin.com/in/romainboboe/" target="_blank"><i class="fab fa-linkedin"></i></a>
+            <a class="mx-2" href="https://www.twitter.com/romainbey" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="mx-2" href="https://www.instagram.com/bey.marcus/" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+      </section>
     </section>
-
-    <section class="about-field white">
-      <header class="leading-field4">
-          <h1 class="field">Web <br> Entrpreneur</h1>
-      </header>
-      <div class="about-field-info">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and
-          typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown
-          printer took a galley of type and scrambled it to make a
-          type specimen book.
-        </p>
-
-        <ul>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-          <li><i class="fab {{ mode }} fa-github"></i></li>
-        </ul>
-      </div>
-      <button class="hire">Hire me</button>
-
-    </section>
-
   </section>
 
 {% endblock %}

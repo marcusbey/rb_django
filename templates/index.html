@@ -40,19 +40,33 @@
 
 {% block content %} {% endblock %}
 
-  <!-- Scroll magic  -->
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js" integrity="sha512-A98SmLRZISk4eIxQBeCm8k0jAcwN3A3lBx4hr7baoMpV1VpxcxlZIhi5fJIZN50sQ5RlCzx8yV+Voy2cR6x0aA==" crossorigin="anonymous"></script>
-
-  <!-- gsap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.0/CSSRulePlugin.min.js" integrity="sha512-G/DslVCv+cnQaVTGKHAvIbe9YSmz+OTTU3v6nBIMHG4IckIB54qlr228DvtPhw8UYS3ye5lWMtTeGX/Ezk8QdA==" crossorigin="anonymous"></script>
-  <!-- vanilla -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-modal/1.6.5/index.min.js" integrity="sha512-sK4qyWeGm10tV6RXhhR3zboMTJKeAw8KYW14ARp6s9Nmqbro/X5lkL8grCOkMUgTwM8ChesiK6iM7vm8QC7jMg==" crossorigin="anonymous"></script>
-
   <!-- Bootstrap core JavaScript -->
   <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
   <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <!-- Barba -->
+  <script src="https://unpkg.com/@barba/core"></script>
+  <!-- Scroll magic  -->
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"
+      integrity="sha256-2p2tRZlPowp3P/04Pw2rqVCSbhyV/IB7ZEVUglrDS/c="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"
+      integrity="sha256-XBVALc3QsDSQiDtiaBwNZ2rxCJTHzlUhhlDQ84J8bw8="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js"
+      integrity="sha256-+9YNuItWuR4sbqeaNiJOxG0BvptYz4fbUXbIZoH5Jwo="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"
+      integrity="sha256-3arngJBQR3FTyeRtL3muAGFaGcL8iHsubYOqq48mBLw="
+      crossorigin="anonymous"
+    ></script>
 
   <!-- Plugin JavaScript -->
   <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
