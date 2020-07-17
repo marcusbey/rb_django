@@ -38,61 +38,111 @@ const closeNav = () => {
 
 
 // Add evel listiner to the header.
+
 const url = "../img/about/bg-programming.jpg"
 const controller0 = new ScrollMagic.Controller();
 const controller1 = new ScrollMagic.Controller();
 const controller2 = new ScrollMagic.Controller();
 const controller3 = new ScrollMagic.Controller();
 
+// TRIGGER 1 : FAde DIV
 const changeBackGround = new ScrollMagic.Scene({
   triggerElement: ".about-intro",
   triggerHook: 0.8,
-  reverse: true
 })
   .addIndicators({colorStart: 'blue', colorTrigger: "blue"})
   .on('start', function(){
       $(window).scroll(function() {
         var scrollTop = $(this).scrollTop();
-        $('.leading').css({
+        $('.header-cover').css({
           opacity: function() {
             var elementHeight = $(this).height();
-            while (scrollTop < elementHeight - 10)
+            while (scrollTop < elementHeight )
              {
-              return (elementHeight - scrollTop) / elementHeight;
+              return 1- (elementHeight - scrollTop) / elementHeight;
             }
           }
         });
       });
     })
- // .setClassToggle('.about-header','bg-programming')
   .addTo(controller0);
 
+// svg animation
+const path = document.querySelector('.line-path');
+const pathLength = path.getTotalLength();
+// Make very long dashes (the length of the path itself)
+path.style.strokeDasharray = pathLength + ' ' + pathLength;
+// Offset the dashes so the it appears hidden entirely
+path.style.strokeDashoffset = pathLength;
+path.getBoundingClientRect();
+// When the page scrolls...
+window.addEventListener("scroll", function(e) {
 
-const fixedsoftHeader = new ScrollMagic.Scene({
-  triggerElement: ".head-soft",
-  triggerHook: 0.09
+  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
+  console.log(scrollPercentage);
+  // Length to offset the dashes
+  var drawLength = pathLength * scrollPercentage * 3;
+  // Draw in reverse
+  path.style.strokeDashoffset = pathLength - drawLength;
+  // When complete, remove the dash array, otherwise shape isn't quite sharp
+ // Accounts for fuzzy math
+  if (scrollPercentage >= 0.99) {
+    path.style.strokeDasharray = "none";
+
+  } else {
+    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+  }
+  if (scrollPercentage <= 0.28) {
+    $(".leading").html("life as a <br>continuous <br>challenge");
+  }
+
+});
+
+// TRIGGER 2 : Unhide about-pitch div
+const unHideElement = new ScrollMagic.Scene({
+  triggerElement: ".about-pitch",
+  triggerHook: 0.3
 })
   .addIndicators({colorStart: 'orange', colorTrigger: "orange"})
   .on('start', function(){
-    $('.head-soft').toggleClass('about-fixed')
+    $('.pitch-wrapper').toggleClass('hide ')
   })
-  .addTo(controller2);
+  .addTo(controller1);
 
-const fixedarchHeader = new ScrollMagic.Scene({
-  triggerElement: ".head-design",
-  triggerHook: 0.09
+// TRIGGER 3 : shrink cover div
+const openElement = new ScrollMagic.Scene({
+  triggerElement: ".about-pitch",
+  triggerHook: 0.3
 })
   .addIndicators({colorStart: 'green', colorTrigger: "green"})
   .on('start', function(){
-    $('.head-design').toggleClass('about-fixed')
+    $('.pitch-cover').toggleClass('pitch-cover-shrink')
   })
+  .addTo(controller2);
+
+
+// TRIGGER 4 : Reveal Leading Software
+const revealLeading = new ScrollMagic.Scene({
+  triggerElement: ".inter-field1",
+  triggerHook: 0.5,
+  offset: -350,
+  reverse: true
+})
+  .addIndicators({colorStart: 'blue', colorTrigger: "blue"})
+  .on('start', function(){
+      $('.header-cover').toggleClass('visible');
+      $(".leading").html("&gt;<br>Hard <br>skills");
+      $(window).scroll(function() {
+        var scrollTop2 = $(this).scrollTop();
+        $('.visible').css({
+          opacity: function() {
+            var elementHeight2 = $(this).height();
+            return (elementHeight2 - scrollTop2) / elementHeight2;
+          }
+        });
+      });
+    })
   .addTo(controller3);
-
-
-
-
-
-
 
 
 

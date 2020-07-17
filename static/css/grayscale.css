@@ -4,7 +4,8 @@
  * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap-grayscale/blob/master/LICENSE)
  */
 
-html { width: 100vw;}
+html { width: 100vw;
+       }
 
 #mainNav {
   min-height: 56px;
@@ -51,9 +52,9 @@ html { width: 100vw;}
   #mainNav .navbar-brand {
     background-color: rgba(255,255,255,0.0);
     position: absolute;
-    top: 20px;
-    left: 10vw;
-    padding: 1rem;
+    padding: 0.8rem;
+    top: 16px;
+    left: 10.5vw;
     border-radius: 50%;
     color: #161616;
     transition: all 0.5s ease-in-out;
@@ -75,9 +76,9 @@ html { width: 100vw;}
   #mainNav.navbar-shrink .navbar-brand {
     background-color: rgba(255,255,255,0.7);
     position: absolute;
-    top: 20px;
-    left: 10vw;
-    padding: 1rem;
+    padding: 0.8rem;
+    top: 16px;
+    left: 10.5vw;
     border-radius: 50%;
     color: #161616;
     transition: all 0.5s ease-in-out;
