@@ -82,6 +82,8 @@ window.addEventListener("scroll", function(e) {
   console.log(scrollPercentage);
   // Length to offset the dashes
   var drawLength = pathLength * scrollPercentage * 3;
+  var toHide = false;
+  var scrollDown = false;
   // Draw in reverse
   path.style.strokeDashoffset = pathLength - drawLength;
   // When complete, remove the dash array, otherwise shape isn't quite sharp
@@ -91,9 +93,6 @@ window.addEventListener("scroll", function(e) {
 
   } else {
     path.style.strokeDasharray = pathLength + ' ' + pathLength;
-  }
-  if (scrollPercentage <= 0.28) {
-    $(".leading").html("life as a <br>continuous <br>challenge");
   }
 
 });
@@ -137,7 +136,7 @@ const revealLeading = new ScrollMagic.Scene({
         $('.visible').css({
           opacity: function() {
             var elementHeight2 = $(this).height();
-            return (elementHeight2 - scrollTop2) / elementHeight2;
+            return 1- (elementHeight2 - scrollTop2) / elementHeight2;
           }
         });
       });
@@ -155,5 +154,16 @@ const revealLeading = new ScrollMagic.Scene({
 
 
 
-
+  // if (scrollPercentage >= 0.28971) {
+  //   scrollDown = true;
+  // }
+  // if ((scrollDown === true) && (toHide === false ) && (scrollPercentage >= 0.2220) && (scrollPercentage <= 0.28971)) {
+  //   $('.leading').toggleClass("hide");
+  //   $(".leading").html("life as a <br>continuous <br>challenge");
+  //   toHide = true;
+  // }
+  // if ((scrollPercentage <= 0.220) && (toHide === true)) {
+  //   $('.leading').toggleClass("hide");
+  //   toHide = false;
+  //   scrollDown = false;
 
