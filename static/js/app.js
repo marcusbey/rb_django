@@ -4,10 +4,6 @@ const pathLogo = document.getElementById("path");
 const mainNav = document.getElementById("mainNav");
 const fixedTop = document.querySelector(".fixed-top");
 
-function  fixed(e){
-  const element = document.querySelector(e);
-  element.style.position = 'fixed';
-}
 
 const openNav =()=> {
   const screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
@@ -69,6 +65,6 @@ $(function() {
 });
 
 $( document ).ready(function() {
-    $("#mySidenav").removeClass("hide");
+    $("#now").removeClass("hide");
 });
 
