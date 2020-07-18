@@ -1,19 +1,4 @@
 
-  <!--   <section id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div id = "app" class="travel_list">
-      #{% include 'travel_list.html' %}
-    </div>
-    <div id = "now">
-      {% include 'now.html' %}
-    </div>
-  </section>
--->
-
-
-
-
-
 
 
 import os

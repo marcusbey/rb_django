@@ -38,32 +38,37 @@ const closeNav = () => {
 
 
 // vars
-var listInterval = 5.5;              // interval in seconds after which the thing changes.
-var stopTimeout = listInterval*10;   // time after which all this thing-changing nonsense stops.
+const listInterval = 5.5;              // interval in seconds after which the thing changes.
+const stopTimeout = listInterval*10;   // time after which all this thing-changing nonsense stops.
 
 // doc ready
 $(function() {
   // prepare email
-  var mailEncrypt=[101,109,97,105,108,64,114,111,109,97,105,110,98,111,98,111,101,46,99,111,109];
-  var mailAddr = '';
-  for (var i=0; i<mailEncrypt.length; i++)
+  const mailEncrypt=[101,109,97,105,108,64,114,111,109,97,105,110,98,111,98,111,101,46,99,111,109];
+  const mailAddr = '';
+  for (const i=0; i<mailEncrypt.length; i++)
     mailAddr+=String.fromCharCode(mailEncrypt[i]);
 
   $('#mail-link').attr("href", 'mailto:' + mailAddr + '?subject=Hello romain!');
 
   function newOccupation () {
-    var $occupations = $("#occupations li:not(.active)");
-    var random = Math.floor(Math.random() * $occupations.length);
-    var $choseOne = $occupations.eq(random);
+    const $occupations = $("#occupations li:not(.active)");
+    const random = Math.floor(Math.random() * $occupations.length);
+    const $choseOne = $occupations.eq(random);
     $("#occupations .active").removeClass("active default");
     $choseOne.addClass("active");
   }
 
   // init
 
-  var interval = window.setInterval(newOccupation, listInterval * 1000);
+  const interval = window.setInterval(newOccupation, listInterval * 1000);
   window.setTimeout(function () {
     window.clearInterval(interval);
   }, stopTimeout * 1000);
 
 });
+
+$( document ).ready(function() {
+    $("#mySidenav").removeClass("hide");
+});
+

@@ -3,9 +3,16 @@
 
 {% block content %}
   <!-- Header -->
-<!--
+  <section id="mySidenav" class="sidenav hide">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <div id = "app" class="travel_list">
+    #{% include 'travel_list.html' %}
+    </div>
+    <div id = "now">
+    {% include 'now.html' %}
+    </div>
+  </section>
 
-  -->
   <section  id="main"
             class="masthead contact-section {{ mode }}"
             style="
@@ -44,9 +51,9 @@
           <a class="mx-2" href="https://www.linkedin.com/in/romainboboe/" target="_blank"><i class="fab {{ mode }} fa-linkedin"></i></a>
           <a class="mx-2" href="https://www.twitter.com/romainbey" target="_blank"><i class="fab {{ mode }} fa-twitter"></i></a>
           <a class="mx-2" href="https://www.instagram.com/bey.marcus/" target="_blank"><i class="fab {{ mode }} fa-instagram"></i></a>
-          <a id="mail-link" class="mx-2 {{ mode }} js-scroll-trigger" href=""> <i class="far {{ mode }} fa-envelope"></i></a>
+          <a id="mail-link" class="mx-2 {{ mode }}" href=""> <i class="far {{ mode }} fa-envelope"></i></a>
         </div>
-        <div onclick="openNav()" class="now js-scroll-trigger container-right home-btn">
+        <div onclick="openNav()" class="now container-right home-btn">
           <div class=" {{ mode }} "> Now
           </div>
         </div>
@@ -55,7 +62,7 @@
   </section >
 
   <section class="hide">
-      {% include 'about.html' %}
+      <!-- {% include 'about.html' %} -->
   </section>
 
 {% endblock %}
