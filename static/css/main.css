@@ -43,6 +43,58 @@
   --fs-p: 1.125rem;
 }
 
+
+
+/*
+/////////////////////////////// home page
+*/
+
+ul#occupations{
+  display: inline-block;
+  overflow: hidden;
+  height: 1.4em;
+  vertical-align: top;
+  width: 60px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+ul#occupations li {
+  white-space: nowrap;
+  display: block;
+  font-weight: 800;
+  position: absolute;
+  top: 100%;
+  transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+}
+ul#occupations li:before {
+  content: " ";
+}
+@keyframes show-thing {
+  from {top: -100%;}
+    to {top: 0;}
+}
+ul#occupations li.active {
+  top: 0px;
+  animation-name: show-thing;
+  -moz-animation-name: show-thing;
+  -webkit-animation-name: show-thing;
+  animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  -webkit-animation-duration: 0.5s;
+}
+ul#occupations li.default.active {
+  animation-duration: 0s;
+}
+
+.p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+
 .hide {
   display: none;
   overflow: visible;
@@ -399,12 +451,10 @@ color: rgba(0, 0, 0, 0.9);
   opacity: 0;
 }
 
-.visible {
+.visiblse {
   opacity: 1;
-  background-color: #121212;
   transition: all 0.5s ease-in-out;
 }
-
 
 .about-body {
   position: relative;
@@ -489,6 +539,11 @@ color: rgba(0, 0, 0, 0.9);
 .pitch-cover-shrink{
   width: 0px;
   transition: all 0.5s ease-in-out;
+}
+
+.soft-cards {
+  padding: 2rem;
+  margin: 2rem;
 }
 
 #work, #softskills, #contact{

@@ -37,133 +37,33 @@ const closeNav = () => {
 };
 
 
-// Add evel listiner to the header.
+// vars
+var listInterval = 5.5;              // interval in seconds after which the thing changes.
+var stopTimeout = listInterval*10;   // time after which all this thing-changing nonsense stops.
 
-const url = "../img/about/bg-programming.jpg"
-const controller0 = new ScrollMagic.Controller();
-const controller1 = new ScrollMagic.Controller();
-const controller2 = new ScrollMagic.Controller();
-const controller3 = new ScrollMagic.Controller();
+// doc ready
+$(function() {
+  // prepare email
+  var mailEncrypt=[101,45,109,97,105,108,64,106,97,110,112,97,101,112,107,101,46,100,101];
+  var mailAddr = '';
+  for (var i=0; i<mailEncrypt.length; i++)
+    mailAddr+=String.fromCharCode(mailEncrypt[i]);
 
-// TRIGGER 1 : FAde DIV
-const changeBackGround = new ScrollMagic.Scene({
-  triggerElement: ".about-intro",
-  triggerHook: 0.8,
-})
-  .addIndicators({colorStart: 'blue', colorTrigger: "blue"})
-  .on('start', function(){
-      $(window).scroll(function() {
-        var scrollTop = $(this).scrollTop();
-        $('.header-cover').css({
-          opacity: function() {
-            var elementHeight = $(this).height();
-            while (scrollTop < elementHeight )
-             {
-              return 1- (elementHeight - scrollTop) / elementHeight;
-            }
-          }
-        });
-      });
-    })
-  .addTo(controller0);
+  $('#mail-link').attr("href", 'mailto:' + mailAddr + '?subject=Hey there yourself!');
 
-// svg animation
-const path = document.querySelector('.line-path');
-const pathLength = path.getTotalLength();
-// Make very long dashes (the length of the path itself)
-path.style.strokeDasharray = pathLength + ' ' + pathLength;
-// Offset the dashes so the it appears hidden entirely
-path.style.strokeDashoffset = pathLength;
-path.getBoundingClientRect();
-// When the page scrolls...
-window.addEventListener("scroll", function(e) {
-
-  var scrollPercentage = (document.documentElement.scrollTop + document.body.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-  console.log(scrollPercentage);
-  // Length to offset the dashes
-  var drawLength = pathLength * scrollPercentage * 3;
-  var toHide = false;
-  var scrollDown = false;
-  // Draw in reverse
-  path.style.strokeDashoffset = pathLength - drawLength;
-  // When complete, remove the dash array, otherwise shape isn't quite sharp
- // Accounts for fuzzy math
-  if (scrollPercentage >= 0.99) {
-    path.style.strokeDasharray = "none";
-
-  } else {
-    path.style.strokeDasharray = pathLength + ' ' + pathLength;
+  function newOccupation () {
+    var $occupations = $("#occupations li:not(.active)");
+    var random = Math.floor(Math.random() * $occupations.length);
+    var $choseOne = $occupations.eq(random);
+    $("#occupations .active").removeClass("active default");
+    $choseOne.addClass("active");
   }
 
+  // init
+
+  var interval = window.setInterval(newOccupation, listInterval * 1000);
+  window.setTimeout(function () {
+    window.clearInterval(interval);
+  }, stopTimeout * 1000);
+
 });
-
-// TRIGGER 2 : Unhide about-pitch div
-const unHideElement = new ScrollMagic.Scene({
-  triggerElement: ".about-pitch",
-  triggerHook: 0.3
-})
-  .addIndicators({colorStart: 'orange', colorTrigger: "orange"})
-  .on('start', function(){
-    $('.pitch-wrapper').toggleClass('hide ')
-  })
-  .addTo(controller1);
-
-// TRIGGER 3 : shrink cover div
-const openElement = new ScrollMagic.Scene({
-  triggerElement: ".about-pitch",
-  triggerHook: 0.3
-})
-  .addIndicators({colorStart: 'green', colorTrigger: "green"})
-  .on('start', function(){
-    $('.pitch-cover').toggleClass('pitch-cover-shrink')
-  })
-  .addTo(controller2);
-
-
-// TRIGGER 4 : Reveal Leading Software
-const revealLeading = new ScrollMagic.Scene({
-  triggerElement: ".inter-field1",
-  triggerHook: 0.5,
-  offset: -350,
-  reverse: true
-})
-  .addIndicators({colorStart: 'blue', colorTrigger: "blue"})
-  .on('start', function(){
-      $('.header-cover').toggleClass('visible');
-      $(".leading").html("&gt;<br>Hard <br>skills");
-      $(window).scroll(function() {
-        var scrollTop2 = $(this).scrollTop();
-        $('.visible').css({
-          opacity: function() {
-            var elementHeight2 = $(this).height();
-            return 1- (elementHeight2 - scrollTop2) / elementHeight2;
-          }
-        });
-      });
-    })
-  .addTo(controller3);
-
-
-
-
-
-
-
-
-
-
-
-
-  // if (scrollPercentage >= 0.28971) {
-  //   scrollDown = true;
-  // }
-  // if ((scrollDown === true) && (toHide === false ) && (scrollPercentage >= 0.2220) && (scrollPercentage <= 0.28971)) {
-  //   $('.leading').toggleClass("hide");
-  //   $(".leading").html("life as a <br>continuous <br>challenge");
-  //   toHide = true;
-  // }
-  // if ((scrollPercentage <= 0.220) && (toHide === true)) {
-  //   $('.leading').toggleClass("hide");
-  //   toHide = false;
-  //   scrollDown = false;
-
