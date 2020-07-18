@@ -3,16 +3,9 @@
 
 {% block content %}
   <!-- Header -->
-  <section id="mySidenav" class="sidenav">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <div id = "app" class="travel_list">
-      {% include 'travel_list.html' %}
-    </div>
-    <div id = "now">
-      {% include 'now.html' %}
-    </div>
-  </section>
+<!--
 
+  -->
   <section  id="main"
             class="masthead contact-section {{ mode }}"
             style="
@@ -38,7 +31,7 @@
               <li>write</li>
               <li>lead</li>
             </ul>
-            , and i'm still learning new stuffs.  <br/>
+            , and i'm still learning new stuffs.  <br/><br/>
              <!-- <a href="{% url 'about' %}"> --> <strong>More coming soon</strong> <!-- </a> -->
           </div>
         </div>
@@ -51,11 +44,10 @@
           <a class="mx-2" href="https://www.linkedin.com/in/romainboboe/" target="_blank"><i class="fab {{ mode }} fa-linkedin"></i></a>
           <a class="mx-2" href="https://www.twitter.com/romainbey" target="_blank"><i class="fab {{ mode }} fa-twitter"></i></a>
           <a class="mx-2" href="https://www.instagram.com/bey.marcus/" target="_blank"><i class="fab {{ mode }} fa-instagram"></i></a>
-          <a class="mx-2 {{ mode }} js-scroll-trigger" href=" {% url 'contact' %}"> <i class="far {{ mode }} fa-envelope"></i></a>
+          <a id="mail-link" class="mx-2 {{ mode }} js-scroll-trigger" href=""> <i class="far {{ mode }} fa-envelope"></i></a>
         </div>
-
-        <div class="container-right  home-btn">
-          <div onclick="openNav()" class=" now btn btn-primary js-scroll-trigger"> Now
+        <div onclick="openNav()" class="now js-scroll-trigger container-right home-btn">
+          <div class=" {{ mode }} "> Now
           </div>
         </div>
       </div>

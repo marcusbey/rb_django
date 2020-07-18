@@ -44,12 +44,12 @@ var stopTimeout = listInterval*10;   // time after which all this thing-changing
 // doc ready
 $(function() {
   // prepare email
-  var mailEncrypt=[101,45,109,97,105,108,64,106,97,110,112,97,101,112,107,101,46,100,101];
+  var mailEncrypt=[101,109,97,105,108,64,114,111,109,97,105,110,98,111,98,111,101,46,99,111,109];
   var mailAddr = '';
   for (var i=0; i<mailEncrypt.length; i++)
     mailAddr+=String.fromCharCode(mailEncrypt[i]);
 
-  $('#mail-link').attr("href", 'mailto:' + mailAddr + '?subject=Hey there yourself!');
+  $('#mail-link').attr("href", 'mailto:' + mailAddr + '?subject=Hello romain!');
 
   function newOccupation () {
     var $occupations = $("#occupations li:not(.active)");
