@@ -25,7 +25,7 @@ const openNav = () => {
 const closeNav = () => {
   mySidePage.style.width = "0";
   main.style.marginLeft= "0";
-
+  document.querySelector(".closebtn").toggle("hide");
   mainNav.className.includes("navbar-dark") ?
   pathLogo.style.stroke = "rgba(255, 255, 255, 0.8)" :
   pathLogo.style.stroke = "rgba(0, 0, 0, 0.8)";

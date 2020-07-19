@@ -113,6 +113,10 @@ ul#occupations li.default.active {
 /*
 //////////////////////////////SIDE BAR
 */
+
+#mySidenav {
+  width: 50%;
+}
 .sidenav {
   position: fixed;
   top: 0;
@@ -152,7 +156,7 @@ ul#occupations li.default.active {
 */
 #now {
     position: fixed;
-    width: 35vw;
+    width: 35%;
     left: 15vw;
     height: 100%;
     overflow-y: scroll;
@@ -191,7 +195,7 @@ ul#occupations li.default.active {
 */
 
 #app {
-  width: 15vw;
+  width: 30%;
   height: 100%;
 }
 
