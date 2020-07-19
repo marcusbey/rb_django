@@ -5,7 +5,7 @@ const mainNav = document.getElementById("mainNav");
 const fixedTop = document.querySelector(".fixed-top");
 
 
-const openNav =()=> {
+const openNav = () => {
   const screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   if (screenWidth < 768) {
     mySidePage.style.height = "50vh";
@@ -41,8 +41,8 @@ const stopTimeout = listInterval*10;   // time after which all this thing-changi
 $(function() {
   // prepare email
   const mailEncrypt=[101,109,97,105,108,64,114,111,109,97,105,110,98,111,98,111,101,46,99,111,109];
-  const mailAddr = '';
-  for (const i=0; i<mailEncrypt.length; i++)
+  let mailAddr = '';
+  for (let i=0; i<mailEncrypt.length; i++)
     mailAddr+=String.fromCharCode(mailEncrypt[i]);
 
   $('#mail-link').attr("href", 'mailto:' + mailAddr + '?subject=Hello romain!');
