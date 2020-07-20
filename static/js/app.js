@@ -1,15 +1,16 @@
-const mySidePage = document.getElementById("mySidenav");
-const main = document.getElementById("main");
-const pathLogo = document.getElementById("path");
-const mainNav = document.getElementById("mainNav");
-const fixedTop = document.querySelector(".fixed-top");
+ mySidePage = document.getElementById("mySidenav");
+ main = document.getElementById("main");
+ pathLogo = document.getElementById("path");
+ mainNav = document.getElementById("mainNav");
+ fixedTop = document.querySelector(".fixed-top");
 
 
-const openNav = () => {
+ openNav = () => {
+  mySidePage.classList.remove("hide");
   const screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   if (screenWidth < 768) {
-    mySidePage.style.height = "50vh";
-    main.style.marginTop = "50vh";
+    mySidePage.style.width = "85vw";
+    main.style.marginLeft = "85vw";
   } else {
   mySidePage.style.width = "50vw";
   main.style.marginLeft = "50vw";
@@ -22,7 +23,7 @@ const openNav = () => {
 
 };
 
-const closeNav = () => {
+ closeNav = () => {
   mySidePage.style.width = "0";
   main.style.marginLeft= "0";
   document.querySelector(".closebtn").toggle("hide");
@@ -34,8 +35,8 @@ const closeNav = () => {
 
 
 // vars
-const listInterval = 5.5;              // interval in seconds after which the thing changes.
-const stopTimeout = listInterval*10;   // time after which all this thing-changing nonsense stops.
+ listInterval = 5.5;              // interval in seconds after which the thing changes.
+ stopTimeout = listInterval*10;   // time after which all this thing-changing nonsense stops.
 
 // doc ready
 $(function() {
@@ -64,7 +65,7 @@ $(function() {
 
 });
 
-$( document ).ready(function() {
-    $("#now").removeClass("hide");
-});
+
+
+
 

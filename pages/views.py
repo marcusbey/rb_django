@@ -31,16 +31,13 @@ def home(request):
   mode = 'dark' if background[1] == 'd' else 'light'
   display = 'hide'
   qs = Travel.objects.all()
-  last_place = qs[2]
-  px = last_place.city.position.x
-  py = last_place.city.position.y
+  last_place = list(qs)[-1]
   context = {
             'background_url': background[0],
             'mode' : mode,
             'display': display,
             'travels_list' : qs,
-            'py' : py,
-            'px' : px,
+            'last_place' : last_place
             }
   return render(request, 'home.html', context);
 

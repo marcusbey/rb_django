@@ -764,12 +764,20 @@ color: rgba(0, 0, 0, 0.9);
 
 
 @media screen and (max-width: 769px) {
-  g {
-      stroke: rgba(0, 0, 0, 0.8) !important;
+
+  #mainNav .navbar-brand {
+    margin-left: 1rem;
   }
 
-  .navbar-light g {
-      stroke: rgba(0, 0, 0, 0.8);
+  #main {
+    width: 100vw;
+    overflow-x: hidden;
+  }
+  .now-section {
+    padding: 2rem 1rem;
+  }
+  .doing  ul {
+    padding-left: 1rem;
   }
 }
 
@@ -785,11 +793,13 @@ color: rgba(0, 0, 0, 0.9);
   .home {
     height: 80vh;
     padding: 0 2rem;
+    margin-bottom: 0rem;
   }
 
   #main{
-   margin-top: 6rem;
    padding: 0;
+   height: 100vh;
+   overflow-y: hidden;
   }
   .row {
     justify-content: center;
@@ -799,13 +809,30 @@ color: rgba(0, 0, 0, 0.9);
     margin-left: 0px;
   }
   .container-left {
-    margin: 1rem 1rem;
-    padding: 0 3rem;
+    margin: 0;
+    padding: 0 0rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .container-left {
+    margin: 0;
+    padding: 0;
   }
 
-  g {
-      stroke: rgba(0, 0, 0, 0.8) !important;
+  .contact-section .social a {
+    height: 2rem;
+    width: 2rem;
+    line-height: 2rem;
   }
+  .home-btn {
+    width:50px;
+    height: 50px;
+  }
+  .intro {
+    font-size: 1rem;
+  }
+
 }
 
 

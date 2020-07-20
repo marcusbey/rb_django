@@ -37,6 +37,18 @@ def count(my_list):
 
 
 
+
+<!--
+pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmYzNhdTFzeWIydW50ZHk2aHpocjYifQ.f4Q9uWawxc7vp2Mw28cVCQ
+
+
+mapbox://styles/marcusbey/ckcthb4452sud1iqadzc3nzjh
+
+pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmOGRoeTFzYTkyem54NmlzaWN5eXkifQ.0l0annt45UB2YYrWijtFZg
+
+-->
+
+
   var pX = {{px}};
   var pY = {{py}};
   console.log(pX, pY)
