@@ -756,6 +756,7 @@ color: rgba(0, 0, 0, 0.9);
 
 
 @media screen and (min-width: 769px) {
+
   .container-left {
     margin: 2rem 1rem 2rem 1rem;
     padding: 0 6rem 0 0;
@@ -790,8 +791,17 @@ color: rgba(0, 0, 0, 0.9);
 
 @media screen and (max-width: 429px) {
 
+  #now {
+    left: 25vw;
+    width: 70%;
+  }
+
+  .intro, .now-section  {
+    font-size: 0.9rem;
+  }
+
   .home {
-    height: 80vh;
+    height: 70vh;
     padding: 0 2rem;
     margin-bottom: 0rem;
   }
@@ -828,9 +838,6 @@ color: rgba(0, 0, 0, 0.9);
   .home-btn {
     width:50px;
     height: 50px;
-  }
-  .intro {
-    font-size: 1rem;
   }
 
 }

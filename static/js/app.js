@@ -9,8 +9,8 @@
   mySidePage.classList.remove("hide");
   const screenWidth = (window.innerWidth > 0) ? window.innerWidth : screen.width;
   if (screenWidth < 768) {
-    mySidePage.style.width = "85vw";
-    main.style.marginLeft = "85vw";
+    mySidePage.style.width = "95vw";
+    main.style.marginLeft = "95vw";
   } else {
   mySidePage.style.width = "50vw";
   main.style.marginLeft = "50vw";
