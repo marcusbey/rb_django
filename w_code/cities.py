@@ -19,14 +19,11 @@ def count(my_list):
   return new_list
 
 # print(count(objects))
-
-
-
     var myPositions = '{{ travels_list }}';
     console.log(myPositions[0]);
-    map = L.map('location_map').setView([51.505, -0.09], 2);
+    map = L.map('location_map').setView([45.5, -73.5833], 13);
     L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
-    L.marker([51.5, -0.09]).addTo(map).bindPopup(
+    L.marker([45.5, -73.5833]).addTo(map).bindPopup(
        'I\'m here!'
     ).openPopup();
 
@@ -39,6 +36,19 @@ def count(my_list):
     {% endfor %}
 
 
+
+  var pX = {{px}};
+  var pY = {{py}};
+  console.log(pX, pY)
+    mapboxgl.accessToken = 'pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmYzNhdTFzeWIydW50ZHk2aHpocjYifQ.f4Q9uWawxc7vp2Mw28cVCQ';
+  var map = new mapboxgl.Map({
+    container: 'travel_map',
+    style: 'mapbox://styles/marcusbey/ckcthb4452sud1iqadzc3nzjh',
+    center: [pY, pX],
+    zoom: 3,
+    attributionControl: false
+    });
+  map.addControl();
 
 
     <script>

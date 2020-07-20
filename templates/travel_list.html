@@ -6,15 +6,16 @@
   <div id="travel_map"></div>
 
   <script>
-    const mymap = L.map('travel_map').setView([51.505, -0.09], 13);
-    const marker = L.marker([51.5, -0.09]).addTo(mymap);
-    L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token={accessToken}', {
-        attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    const mymap = L.map('travel_map').setView([45.5, -73.5833], 3);
+    const marker = L.marker([45.5, -73.5833]).addTo(mymap);
+    marker.bindPopup("<b>Hello world!</b><br>I'm in Montreal").openPopup();
+    L.tileLayer('https://api.mapbox.com/styles/v1/marcusbey/ckcthb4452sud1iqadzc3nzjh/tiles/{z}/{x}/{y}?access_token={accessToken}', {
+        attribution: '© <a href="https://apps.mapbox.com/feedback/">Mapbox</a> © <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
         maxZoom: 18,
         id: 'mapbox/streets-v11',
         tileSize: 512,
         zoomOffset: -1,
-        accessToken: 'pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmYzNhdTFzeWIydW50ZHk2aHpocjYifQ.f4Q9uWawxc7vp2Mw28cVCQ'
+        accessToken: 'pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmOGRoeTFzYTkyem54NmlzaWN5eXkifQ.0l0annt45UB2YYrWijtFZg'
     }).addTo(mymap);
 
   </script>
@@ -27,5 +28,10 @@
 
 <!--
 pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmYzNhdTFzeWIydW50ZHk2aHpocjYifQ.f4Q9uWawxc7vp2Mw28cVCQ
--->
 
+
+mapbox://styles/marcusbey/ckcthb4452sud1iqadzc3nzjh
+
+pk.eyJ1IjoibWFyY3VzYmV5IiwiYSI6ImNrYzFmOGRoeTFzYTkyem54NmlzaWN5eXkifQ.0l0annt45UB2YYrWijtFZg
+
+-->

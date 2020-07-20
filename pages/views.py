@@ -27,15 +27,20 @@ def index(request):
   return render(request, 'index.html', {'title': title, 'mode' : mode });
 
 def home(request):
-  background = rand_background();
-  mode = 'dark' if background[1] == 'd' else 'light';
+  background = rand_background()
+  mode = 'dark' if background[1] == 'd' else 'light'
   display = 'hide'
   qs = Travel.objects.all()
+  last_place = qs[2]
+  px = last_place.city.position.x
+  py = last_place.city.position.y
   context = {
             'background_url': background[0],
             'mode' : mode,
             'display': display,
-            'travels_list' : qs
+            'travels_list' : qs,
+            'py' : py,
+            'px' : px,
             }
   return render(request, 'home.html', context);
 
