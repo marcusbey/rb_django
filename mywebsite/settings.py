@@ -140,7 +140,7 @@ MEDIA_URL = '/media/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
-STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 GRAPH_MODELS = {
