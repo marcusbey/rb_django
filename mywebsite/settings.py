@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 """
 
 import os
-import dj_database_url
 import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -40,11 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
+    'django_extensions',
     'django.contrib.staticfiles',
     'django.contrib.gis',
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
-    'django_extensions',
+
 ]
 
 MIDDLEWARE = [
@@ -156,5 +156,6 @@ django_heroku.settings(locals())
 
 # Update Database Configuration
 
-prod_db  =  dj_database_url.config(conn_max_age=500)
+prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=True)
 DATABASES['default'].update(prod_db)
+
