@@ -150,9 +150,6 @@ GRAPH_MODELS = {
 }
 
 
-# Conflsigure Django App for Heroku.
-django_heroku.settings(locals())
-
 # Update Database Configuration
 
 prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=True)
