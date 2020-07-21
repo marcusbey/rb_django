@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/3.0/ref/settings/
 
 import os
 import django_extensions
+import dj_database_url
 
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -27,7 +28,7 @@ SECRET_KEY = '&_&3zz0t#*9%0lc%8hwy9%&!%3a$!9u1bwbv53&6kk18g_mb)b'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['rbwebsite.herokuapp.com']
 
 
 # Application definition
@@ -47,6 +48,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -138,6 +140,8 @@ MEDIA_URL = '/media/img/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 
+STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
+
 
 GRAPH_MODELS = {
   'all_applications': True,
@@ -145,9 +149,11 @@ GRAPH_MODELS = {
 }
 
 
-
-
 # Conflsigure Django App for Heroku.
 import django_heroku
 django_heroku.settings(locals())
 
+# Update Database Configuration
+import dj_database_url
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
