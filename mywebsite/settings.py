@@ -151,7 +151,6 @@ GRAPH_MODELS = {
 
 
 # Update Database Configuration
-
-prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=True)
-DATABASES['default'].update(prod_db)
+# prod_db  =  dj_database_url.config(conn_max_age=500, ssl_require=True)
+# DATABASES['default'].update(prod_db)
 
