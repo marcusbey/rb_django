@@ -97,6 +97,7 @@ ul#occupations li.default.active {
 
 .hide {
   display: none;
+  opacity: 0;
   overflow: visible;
 }
 
