@@ -45,7 +45,6 @@ INSTALLED_APPS = [
     'django.contrib.gis',
     'pages.apps.PagesConfig',
     'travel.apps.TravelConfig',
-
 ]
 
 MIDDLEWARE = [
