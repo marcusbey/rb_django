@@ -162,6 +162,7 @@ GRAPH_MODELS = {
 
 # Configure GDAL Path
 GDAL_LIBRARY_PATH = os.environ.get('GDAL_LIBRARY_PATH')
+#GDAL_LIBRARY_PATH = '/home/sue/local/lib/libgdal.so'
 GEOS_LIBRARY_PATH = os.environ.get('GEOS_LIBRARY_PATH')
 
 # Update Database Configuration

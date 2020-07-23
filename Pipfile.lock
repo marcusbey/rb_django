@@ -60,7 +60,7 @@
                 "sha256:698fa841a1ab75c121da736acb36ffe84c0a0081837884c208a3e5c9bcc4bf2b"
             ],
             "index": "pypi",
-            "version": "==3.1.2"
+            "version": "==2.4.3"
         },
         "gunicorn": {
             "hashes": [
