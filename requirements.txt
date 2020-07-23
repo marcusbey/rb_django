@@ -22,7 +22,7 @@ psycopg2-binary==2.8.5
 pydot==1.4.1
 pygdal==3.1.2.6
 pyparsing==2.4.7
-python-dotenv==0.10.3
+python-dotenv==0.14.0
 pytz==2020.1
 six==1.15.0
 sqlparse==0.3.1
